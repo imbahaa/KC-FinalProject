@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 081930da5e255e348940373200bbeaca
 ModelImporter:
-  serializedVersion: 19301
+  serializedVersion: 21300
   internalIDToNameTable:
   - first:
       74: 416870459326255563
@@ -20,6 +20,7 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -28,11 +29,30 @@ ModelImporter:
       that might lower retargeting quality:\nNote: Activate translation DOF on avatar
       to improve retargeting quality.\n\t'Scapula_L' has translation animation that
       will be discarded.\n"
-    animationRetargetingWarnings: 
+    animationRetargetingWarnings: "\nRetargeting quality report for clip 'tpose':\n\tLeftLowerLeg
+      average position error 6.2 mm and maximum position error 6.2 mm at time 0:
+      0 (0.0%) Frame 0\n\tRightLowerLeg average position error 6.2 mm and maximum
+      position error 6.2 mm at time 0: 0 (0.0%) Frame 0\n\tLeftLowerArm average position
+      error 1.6 mm and maximum position error 1.6 mm at time 0: 0 (0.0%) Frame 0\n\tRightLowerArm
+      average position error 1.6 mm and maximum position error 1.6 mm at time 0:
+      0 (0.0%) Frame 0\n\nRetargeting quality report for clip 'human_male_run_01':\n\tLeftLowerLeg
+      average position error 0.7 mm and maximum position error 8.7 mm at time 0:15
+      (65.0%) Frame 15\n\tRightLowerLeg average position error 0.7 mm and maximum
+      position error 8.7 mm at time 0: 5 (15.0%) Frame 5\n\tLeftUpperArm average
+      position error 10.0 mm and maximum position error 20.2 mm at time 0: 9 (35.0%)
+      Frame 9\n\tLeftLowerArm average position error 10.0 mm and maximum position
+      error 20.3 mm at time 0: 9 (35.0%) Frame 9\n\tLeftHand average position error
+      10.0 mm and maximum position error 20.2 mm at time 0: 9 (35.0%) Frame 9\n\tRightUpperArm
+      average position error 15.4 mm and maximum position error 15.6 mm at time 0:19
+      (85.0%) Frame 19\n\tRightLowerArm average position error 15.4 mm and maximum
+      position error 15.6 mm at time 0:19 (85.0%) Frame 19\n\tRightHand average position
+      error 15.4 mm and maximum position error 15.6 mm at time 0:19 (85.0%) Frame
+      19\n\tHead average position error 3.0 mm and maximum position error 3.0 mm
+      at time 0:21 (95.0%) Frame 21\n"
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 0
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -110,21 +130,27 @@ ModelImporter:
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    nodeNameCollisionStrategy: 0
     fileIdsGeneration: 2
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
     skinWeightsMode: 0
     maxBonesPerVertex: 4
     minBoneWeight: 0.001
+    optimizeBones: 1
     meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
@@ -1033,6 +1059,8 @@ ModelImporter:
   animationType: 3
   humanoidOversampling: 1
   avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

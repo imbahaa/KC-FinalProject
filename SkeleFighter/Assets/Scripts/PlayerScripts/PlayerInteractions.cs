@@ -39,4 +39,8 @@ public class PlayerInteractions : MonoBehaviour
             }
         }
     }
+    private void Fire()
+    {
+
+    }
 }

@@ -9,9 +9,9 @@ public class Enemy : MonoBehaviour
     private StateMachine statemachine;
     private NavMeshAgent agent;
     private Animator Animator;
-    private int enemyHP = 100;
+    [SerializeField]
+    public float enemyHP= 100f;
     private Rigidbody RB;
-
     public NavMeshAgent Agent { get => agent; }
     [SerializeField]
     private string currentState;
@@ -28,18 +28,22 @@ public class Enemy : MonoBehaviour
         RB = GetComponent<Rigidbody>();
     }
 
+    public void TakeDamage(float damageAmount)
+    {
+        enemyHP -= damageAmount;
+
+        if(enemyHP <= 0)
+        {
+            EnemyDeath();
+        }
+    }
+
+
     // Update is called once per frame
     void Update()
     {
         playerAnimation();
-        if (RB.velocity.x != 0f)
-        {
-            velocity = 1;
-        }
-        else if (RB.velocity.x == 0f)
-        {
-
-        }
+        velocity = 1;
     }
     void playerAnimation()
     {
@@ -51,5 +55,11 @@ public class Enemy : MonoBehaviour
         {
             Animator.SetBool("Walking", false);
         }
+    }
+    public void EnemyDeath()
+    {
+        RB.freezeRotation = true;
+        RB.constraints = RigidbodyConstraints.FreezePosition;
+        Animator.SetBool("Death", true);
     }
 }

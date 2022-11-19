@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PatrolState : BaseState
-{
+{ 
     public int waypointIndex;
     public float waittimer;
 
@@ -25,16 +25,15 @@ public class PatrolState : BaseState
         if (enemy.Agent.remainingDistance < 0.2f)
         {
             waittimer += Time.deltaTime;
-            if (waittimer > 2)
+            if (waypointIndex < enemy.path.waypoints.Count - 1)
             {
-               if (waypointIndex < enemy.path.waypoints.Count - 1)
-                  waypointIndex++;
-               else
-                  waypointIndex = 0;
-               enemy.Agent.SetDestination(enemy.path.waypoints[waypointIndex].position);
-                waittimer = 0;
-                
+                waypointIndex++;
             }
+            else
+            {
+                waypointIndex = 0;
+            }
+            enemy.Agent.SetDestination(enemy.path.waypoints[waypointIndex].position);
         }
     }
 }
