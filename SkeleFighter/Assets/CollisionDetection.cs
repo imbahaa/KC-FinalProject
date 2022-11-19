@@ -18,7 +18,6 @@ public class CollisionDetection : MonoBehaviour
         if (other.tag == "Enemy" && pm.isAttacking)
         {
             other.GetComponent<Animator>().SetTrigger("Hit");
-            object value = enemy.GetComponent<Enemy>().TryGetComponent<Enemy>(out Enemy enemy);
             Debug.Log(other.name);
             Instantiate(hitparticle, new Vector3(other.transform.position.x, transform.position.y, other.transform.position.z), other.transform.rotation);
             enemy.TakeDamage(50f);
