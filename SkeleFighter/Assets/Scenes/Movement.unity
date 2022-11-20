@@ -496,6 +496,7 @@ MonoBehaviour:
   currentState: 
   path: {fileID: 1178042211}
   velocity: 0
+  damageDone: 50
 --- !u!114 &136070811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1040,6 +1041,7 @@ MonoBehaviour:
   currentState: 
   path: {fileID: 614281082}
   velocity: 0
+  damageDone: 50
 --- !u!65 &304709060
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1373,7 +1375,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.15
+  near clip plane: 0.22
   far clip plane: 1000
   field of view: 90
   orthographic: 0
@@ -3167,7 +3169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pm: {fileID: 663049482}
   hitparticle: {fileID: 1834194341294532, guid: d5f26854a8904624c8073139cd2eb346, type: 3}
-  enemy: {fileID: 0}
+  enemy: {fileID: 304709059}
 --- !u!1 &1159501941
 GameObject:
   m_ObjectHideFlags: 0
@@ -4927,6 +4929,7 @@ MonoBehaviour:
   currentState: 
   path: {fileID: 1278587421}
   velocity: 0
+  damageDone: 50
 --- !u!114 &1618495028
 MonoBehaviour:
   m_ObjectHideFlags: 0

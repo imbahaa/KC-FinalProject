@@ -17,6 +17,7 @@ public class Enemy : MonoBehaviour
     private string currentState;
     public Path path;
     public int velocity;
+    public float damageDone;
 
     // Start is called before the first frame update
     void Start()
@@ -27,17 +28,6 @@ public class Enemy : MonoBehaviour
         Animator = GetComponent<Animator>();
         RB = GetComponent<Rigidbody>();
     }
-
-    public void TakeDamage(float damageAmount)
-    {
-        enemyHP -= damageAmount;
-
-        if(enemyHP <= 0)
-        {
-            EnemyDeath();
-        }
-    }
-
 
     // Update is called once per frame
     void Update()
@@ -54,6 +44,16 @@ public class Enemy : MonoBehaviour
         else
         {
             Animator.SetBool("Walking", false);
+        }
+    }
+    public void TakeDamage(float damageTaken)
+    {
+        float damageDone = damageTaken;
+        Debug.Log("Damaged");
+        enemyHP -= damageDone;
+        if (enemyHP <= 0)
+        {
+            EnemyDeath();
         }
     }
     public void EnemyDeath()
