@@ -2,6 +2,8 @@ using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using System;
 
 public class CollisionDetection : MonoBehaviour
 {
@@ -13,6 +15,10 @@ public class CollisionDetection : MonoBehaviour
     private void Start()
     {
         enemy = GetComponent<Enemy>();
+    }
+    private void Update()
+    {
+
     }
     public void OnTriggerEnter(Collider other)
     {

@@ -43,6 +43,10 @@ public class Path : MonoBehaviour
             }
         }
     }
+    public void DestroyObject()
+    {
+        Destroy(gameObject);
+    }
     public void OnDrawGizmosSelected()
     {
         if (alwaysDrawPath)

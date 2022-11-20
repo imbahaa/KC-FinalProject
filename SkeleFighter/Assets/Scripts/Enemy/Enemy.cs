@@ -1,8 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class Enemy : MonoBehaviour
 {
@@ -18,6 +21,8 @@ public class Enemy : MonoBehaviour
     public Path path;
     public int velocity;
     public float damageDone;
+    public TextMeshProUGUI score;
+    public long scoreAmount = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -58,8 +63,12 @@ public class Enemy : MonoBehaviour
     }
     public void EnemyDeath()
     {
+        RB.constraints = RigidbodyConstraints.FreezeAll;
+        Int64.TryParse(score.text, out scoreAmount);
+        path.DestroyObject();
+        scoreAmount++;
         RB.freezeRotation = true;
-        RB.constraints = RigidbodyConstraints.FreezePosition;
         Animator.SetBool("Death", true);
+        score.text = scoreAmount.ToString();
     }
 }
